@@ -1,0 +1,229 @@
+.sidebar_container {
+	.full_screen_blur {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+		z-index: 40;
+		pointer-events: auto;
+	}
+	.tabs_content_header_container {
+		height: 88px;
+		padding: 24px;
+		display: flex;
+		gap: 15px;
+		align-items: center;
+
+		.tabs_header_text {
+			font-size: 16px;
+		}
+
+		.tabs_header_logo {
+			img {
+				width: 25px;
+				height: 25px;
+				margin-right: 8px;
+			}
+		}
+
+		.tabs_header_right {
+			gap: 12px;
+
+			.raise_ticket_container {
+				width: 180px;
+				height: 40px;
+				background-color: #393939;
+				display: flex;
+				justify-content: center;
+				border-radius: 6px;
+				align-items: center;
+
+				span {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.raise_icons_container {
+			border-radius: 6px;
+			height: 40px;
+			width: 80px;
+			border: 1px solid #282828;
+			padding: 10px 0px;
+			display: flex;
+			justify-content: space-around;
+
+			button {
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.left_arrow {
+				border-right: 1px solid #8c8c8c;
+			}
+		}
+
+		.close_icon {
+			width: 40px;
+			height: 40px;
+			border: 1px solid #282828;
+			justify-content: center;
+			align-items: center;
+			border-radius: 6px;
+		}
+	}
+
+	.tabs_details_section_container {
+		padding: 24px;
+	}
+
+	.tabs_location_details_container {
+		padding: 24px;
+		border-top: 1px solid #373737;
+		border-bottom: 1px solid #373737;
+
+		.last_tracked,
+		.gps_status,
+		.avg_speed {
+			p {
+				margin-bottom: 15px;
+			}
+
+			width: 20%;
+		}
+
+		.location {
+			p {
+				margin-bottom: 15px;
+			}
+
+			width: 40%;
+		}
+
+		div {
+			p:first-child {
+				font-size: 14px;
+				color: #9c9c9c;
+			}
+
+			p:nth-child(2) {
+				font-size: 14px;
+				color: white;
+			}
+		}
+	}
+}
+
+.tabs_title_container {
+	padding: 1.25rem 0;
+
+	.tab_title {
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	.tab_title .active_tab {
+		background-color: #323232;
+	}
+}
+
+.sidebar_container {
+	height: 100%;
+	/* Ensure full height of the viewport */
+
+	.tab_content_container {
+		/* This part will be scrollable */
+		max-height: calc(100vh - 310px);
+		/* Subtract the header height */
+		overflow-y: auto;
+		/* Enables scrolling */
+		-ms-overflow-style: none;
+		/* Hides scrollbar for IE and Edge */
+		scrollbar-width: none;
+		/* Hides scrollbar for Firefox */
+		padding: 16px;
+		margin-top: 16px;
+
+		/* Optional: Smooth scrolling */
+		scroll-behavior: smooth;
+
+		/* Hide the scrollbar (Chrome, Safari, Opera) */
+		::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
+.tabs_content_container {
+	height: 100%;
+	/* Full height of sidebar */
+}
+
+.tabs_content_header_container {
+	position: sticky;
+	top: 0;
+	background-color: #1b1b1b;
+	z-index: 10;
+	padding: 16px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tabs_location_details_container {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.sidebar_vehicle_container {
+	height: 100vh;
+	/* Ensure sidebar takes full viewport height */
+}
+
+.sidebar_container {
+	display: flex;
+	flex-direction: column;
+}
+
+.tabs_content_container {
+	height: 100%;
+	/* Ensure the sidebar takes full height of the screen */
+}
+
+.tabs_content_header_container {
+	position: sticky;
+	top: 0;
+	background-color: #1b1b1b;
+	z-index: 10;
+	padding: 16px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tabs_location_details_container {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.tab_content_section {
+	/* Make the tab content scrollable */
+	flex-grow: 1;
+	/* This ensures that this section takes up remaining height */
+	overflow-y: auto;
+	/* Enables scrolling */
+	-ms-overflow-style: none;
+	/* Hides scrollbar for IE and Edge */
+	scrollbar-width: none;
+	/* Hides scrollbar for Firefox */
+	padding: 16px;
+
+	/* Optional: Smooth scrolling */
+	scroll-behavior: smooth;
+
+	/* Hide the scrollbar (Chrome, Safari, Opera) */
+	::-webkit-scrollbar {
+		display: none;
+	}
+}

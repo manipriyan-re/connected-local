@@ -1,0 +1,23 @@
+.custom_tabel_container {
+  tr {
+    border-bottom: 1px solid #2c2c2c;
+  }
+  td {
+    cursor: pointer;
+  }
+  p {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .tabel_header {
+  }
+  .tabel_body {
+    .vehicle_details {
+    }
+    .updated_time {
+      p {
+        text-align: right;
+      }
+    }
+  }
+}

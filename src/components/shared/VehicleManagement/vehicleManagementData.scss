@@ -1,0 +1,20 @@
+.custom-table {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgb(81, 80, 80);
+}
+
+.table-header-cell {
+  padding: 1rem 0.5rem;
+  text-align: left;
+  font-weight: bold;
+  background-color: var(--graph-bgcolor);
+}
+
+.table-body-row .table-body-cell {
+  padding: 2rem 0.5rem;
+  border-bottom: 1px solid rgb(81, 80, 80);
+}
+.table-header-row {
+  background-color: rgb(81, 80, 80);
+}

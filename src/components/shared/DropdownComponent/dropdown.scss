@@ -1,0 +1,120 @@
+.dropdown {
+  font-size: 16px;
+ 
+  position: relative;
+   
+  border: 1px solid var(--color-2); 
+  border-radius: 8px;  
+  .selected {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding : 12px;
+      border-radius: 8px;
+      background-color:var(--gradient-color-1);
+      color: var(--color-5);
+      height: inherit;
+      cursor: pointer;
+    
+      gap: 10px;
+      .icon {
+          transition: transform 0.3s ease-in-out;
+          color: var(--color-4);        
+          &.rotate-180 {
+              transform: rotate(180deg);
+          }
+      }
+  }
+}
+
+
+
+.dropdown-list {
+  background-color: var(--gradient-color-1);
+  margin-top: 4px;
+  border-radius: 8px;
+  overflow-y: auto;
+  transition: max-height 0.3s ease-in-out;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+
+  &.hidden {
+      max-height: 0;
+      visibility: hidden;
+  }
+
+  &.visible {
+      max-height: auto;
+      visibility: visible;
+  }
+
+  .search-bar {
+      position: sticky;
+      top: 0;
+      background-color:var(--gradient-color-1); 
+      padding: 8px;
+      z-index: 5;
+
+      input {
+          width: 100%;
+          padding: 6px;
+          border-radius: 8px;
+          background-color:var(--gradient-color-2);
+          
+          outline: none;
+          border: none;
+          font-size: 14px;
+
+          &::placeholder {
+              color: var(--color-4);
+          }
+      }
+  }
+
+  .dropdown-item {
+      padding: 8px;
+      font-size: 14px;
+      color: var(--color-5);
+      cursor: pointer;
+      
+
+      &:hover {
+          background-color:var(--ttip-color-text); 
+      }
+
+      &.active {
+          border-left: 3px solid var(--color-5); 
+          
+      }
+
+      &.hidden {
+          display: none;
+      }
+  }
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 4px;
+  background-color: tra;
+  font-size: 14px;
+  gap : 6px;
+  .remove-chip {
+    margin-left: 4px;
+    cursor: pointer;
+    color: var(--color-red);
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+
+  &::-webkit-scrollbar {
+      display: none; 
+  }
+}

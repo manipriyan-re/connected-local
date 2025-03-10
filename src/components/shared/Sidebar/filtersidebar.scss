@@ -1,0 +1,140 @@
+/* Sidebar Width */
+.sidebar_width {
+	width: 500px !important;
+}
+
+/* Header Section */
+.filter_sidebar_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px;
+}
+
+.filter_sidebar_header h2 {
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+}
+
+.filter_sidebar_header img {
+	margin-right: 8px;
+}
+
+/* Scrollable Content */
+.filter_sidebar_content {
+	padding: 16px;
+	overflow-y: auto;
+}
+
+/* Section Separator */
+.filter_header_separator {
+	border-bottom: 1px solid #373737;
+	margin: 16px 0;
+}
+
+/* Row Layout */
+.filter_row {
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+/* Column Layout */
+.filter_column {
+	width: 50%;
+}
+
+/* Labels */
+.filter_label {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 8px;
+	color: #fbfbfb;
+}
+
+/* Dropdowns */
+.filter_select {
+	width: 100%;
+	height: 30px;
+	background-color: #262626;
+	border: 1px solid #373737;
+	border-radius: 4px;
+	padding: 8px;
+	color: #fbfbfb;
+	font-size: 12px;
+}
+
+/* Date Range Inputs */
+.filter_date_column {
+	width: 50%;
+}
+
+.filter_date_label {
+	font-size: 14px;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.filter_date_input {
+	width: 100%;
+	height: 30px;
+	background-color: #262626;
+	border: none;
+	border-radius: 4px;
+	padding: 8px;
+	color: #fbfbfb;
+	font-size: 12px;
+}
+
+.filter_date_input:hover {
+	border: 1px solid #727272;
+}
+
+/* Filter Buttons Container */
+.filter_buttons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	margin-top: 30px;
+	padding: 16px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* Clear All Button */
+.clear_button {
+	background-color: #262626;
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 4px;
+	width: 110px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	cursor: pointer;
+}
+
+.clear_button:hover {
+	background-color: #373737;
+}
+
+.full_screen_blur {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+	z-index: 30;
+	pointer-events: auto;
+}
+
+.filter_sidebar.open {
+	transform: translateX(0);
+}

@@ -1,0 +1,220 @@
+.vehicle_dashboard_container {
+	color: white;
+	padding: 0 20px;
+
+	.vehicle_dashboard_header {
+		height: 4rem;
+
+		section {
+			width: 50%;
+		}
+	}
+
+	.vehicle_dashboard_tabs_container {
+		height: 60px;
+
+		.dashboard_tabs_left {
+			.tabs_title_container {
+				display: flex;
+				border-radius: 6px;
+
+				button {
+					height: 36px;
+					width: 152px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 6px;
+					font-size: 16px;
+					font-weight: normal;
+					font-family: 'Montserrat', serif;
+				}
+
+				.dropdown_container button {
+					width: 100%;
+				}
+
+				.active_tab {
+					color: var(--text-color);
+					white-space: nowrap;
+				}
+
+				.inactive_tab {
+					color: var(--inactive-color);
+					opacity: 50%;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+
+	.vehicle_dashboard_content_container {
+		border-radius: 12px;
+		color: var(--text-color);
+		width: 100%;
+
+		.vehicle_dashboard_status_main_container {
+			padding: 10px 1rem 0;
+			border-radius: 12px;
+			border: 1px solid var(--color-2);
+			background: radial-gradient(
+				38.49% 87.63% at 49.95% 92.98%,
+				var(--gradient-color-2) 0%,
+				var(--gradient-color-1) 100%
+			);
+			backdrop-filter: blur(2.45px);
+
+			.vehicle_status_container {
+				padding-right: 2.4rem;
+				white-space: nowrap;
+			}
+
+			.border_right {
+				border-right: 2px solid var(--color-4);
+				padding-right: 15px;
+			}
+
+			.border-left {
+				border-left: 2px solid var(--color-4);
+			}
+
+			// .vehicle_dashboard_status_container,
+			// .vehicle_dashboard_alerts_container {
+			// 	border-left: 2px solid var(--color-2);
+			// }
+
+			.vehicle_dashboard_status_container,
+			.vehicle_dashboard_alerts_container {
+				position: relative;
+
+				&::before {
+					content: '';
+					position: absolute;
+					height: 60%;
+					left: 5px;
+					bottom: 0;
+					width: 1.5px;
+					border: 1.5px solid var(--color-2);
+				}
+			}
+
+			// @media (min-width: 1100px) and (orientation: landscape) {
+			// 	.vehicle_count_container {
+			// 		width: 9%;
+			// 	}
+
+			// 	.vehicle_dashboard_status_container {
+			// 		width: 60%;
+			// 	}
+
+			// 	.vehicle_dashboard_alerts_container {
+			// 		width: 31%;
+			// 	}
+			// }
+
+			section {
+				gap: 15px;
+			}
+
+			.header_title,
+			.status_title {
+				font-size: 12px;
+				color: var(--text-color-header);
+			}
+
+			.status_title {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				.status_indicator {
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					display: block;
+				}
+			}
+
+			.status_count {
+				font-size: 16px;
+				margin-top: 14px;
+			}
+		}
+
+		.vehicle_dashboard_map_main_container {
+			margin-top: 1.5rem;
+			display: flex;
+
+			.vehicle_dashboard_map_container {
+				width: 65%;
+
+				@media (max-width: 1100px) {
+					width: 55%;
+				}
+			}
+
+			.vehicle_dashboard_map_details_container {
+				width: 35%;
+
+				.alert_type_container,
+				.alert_group-container {
+					width: 30%;
+					border: 1px solid #282828;
+					border-radius: 6px;
+					margin-right: 15px;
+					font-size: 12px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.alert_type_container {
+					background: var(--gradient-color-1);
+					color: var(--text-color);
+					border: 1px solid var(--color-2);
+				}
+
+				.alert_search_container {
+					width: 40%;
+				}
+
+				@media (max-width: 1100px) {
+					width: 45%;
+				}
+			}
+		}
+	}
+
+	.vehicle_status_text_container {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 10%;
+			bottom: -10px;
+			height: 1px;
+			width: 50%;
+			opacity: 0;
+			background-color: #474747;
+			transition: opacity 0.3s ease;
+		}
+
+		&:hover::after,
+		&.active::after {
+			opacity: 1;
+		}
+
+		&.active::after {
+			background-color: #ffffff;
+		}
+	}
+
+	.selected_indicator {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		display: block;
+	}
+}

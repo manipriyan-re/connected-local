@@ -1,0 +1,76 @@
+/* dropdown.scss */
+.relative-dropdown {
+	position: relative;
+	min-width: 10rem;
+	width: max-content;
+	height: 36px;
+}
+
+.absolute-dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	border: 1px solid var(--color-2);
+	background: var(--gradient-color-1);
+}
+
+.z-10 {
+	z-index: 10;
+}
+
+.mt-2 {
+	margin-top: 0.5rem;
+}
+
+// Mixin for button styles
+@mixin button-style($bg, $color) {
+	background: $bg;
+	color: $color;
+}
+
+.dropdown_container {
+	position: relative;
+	overflow: visible;
+
+	button,
+	ul li {
+		@include button-style(var(--gradient-color-1), var(--text-color));
+	}
+
+	button {
+		border: 1px solid var(--color-2);
+	}
+}
+
+.dropdown_container_white {
+	button {
+		@include button-style(white, #222222);
+		border: 1px solid var(--color-2);
+	}
+
+	button:focus + ul li,
+	ul li {
+		@include button-style(#222, white);
+		border: 1px solid var(--color-2);
+	}
+}
+
+button {
+	border-radius: 6px;
+	font-size: 16px;
+	border: 1px solid #303030;
+}
+
+.selected_option_container {
+	gap: 10px;
+}
+
+.selected_option_button {
+	padding: 12px 16px;
+}
+
+.list-selected {
+	border-left: 2px solid var(--text-color);
+}

@@ -1,0 +1,16 @@
+.active_tab {
+	border-radius: 6px;
+	padding: 8px 16px;
+	background-color: var(--color-2);
+}
+.inactive_tab {
+	border: none;
+	&:hover {
+		background-color: var(--color-2);
+	}
+}
+.tabs_background {
+	background-color: var(--gradient-color-1);
+	padding: 1px 0;
+	border-radius: 6px;
+}

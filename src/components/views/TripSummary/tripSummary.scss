@@ -1,0 +1,128 @@
+.trip-list {
+  list-style: none;
+
+  .timeStamp {
+    font-size: 0.8rem;
+    color: var(--color-5);
+  }
+
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-2);
+  }
+}
+
+.tripDetails {
+  border: 1px solid var(--color-2);
+  background: radial-gradient(
+    38.49% 87.63% at 49.95% 92.98%,
+    var(--gradient-color-2) 0%,
+    var(--gradient-color-1) 100%
+  );
+  backdrop-filter: blur(2.45px);
+  border-radius: 12px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: 13rem;
+
+  p {
+    text-transform: uppercase;
+    font-family: var(--font-family-2);
+  }
+}
+
+.address-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+  position: relative;
+
+  .top-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ee2e22;
+    position: absolute;
+    left: -18.5px;
+    top: .75rem;
+  }
+
+  .bottom-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid #ee2e22;
+    left: -18.5px;
+    top: .75rem;
+  }
+}
+
+.trip-add {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    width: 1.5px;
+    border: 1.5px dashed #ee2e22;
+  }
+
+  &:first-child::before {
+    top: 50%;
+    height: 50%;
+  }
+
+  &:last-child::before {
+    top: 0;
+    height: 50%;
+  }
+}
+
+
+.replay-controls {
+  background: #161616cc;
+}
+
+.timeline-bar {
+  height: 3px;
+  background-color: var(--color-3);
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ee2e22;
+  }
+
+  &::-moz-range-thumb {
+    background: #ee2e22;
+  }
+}
+
+.replay-speed {
+  font-family: var(--font-family-1);
+
+  ul {
+    list-style: none;
+    background-color: var(--color-2);
+    border-radius: 3px;
+    border: 1px solid var(--gradient-color-1);
+    font-size: 0.8rem;
+    bottom: 2.5rem;
+    width: 3.25rem;
+  }
+
+  .speed-box {
+    background-color: var(--color-2);
+    border-radius: 3px;
+    border: 1px solid var(--gradient-color-1);
+    font-size: 0.8rem;
+    width: 3.25rem;
+  }
+
+  .select-s {
+    border-left: 2px solid;
+  }
+}

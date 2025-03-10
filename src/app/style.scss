@@ -1,0 +1,322 @@
+// Dark Theme Variables
+$background-color-dark: #1b1b1b;
+$text-color-dark: #fbfbfb;
+$text-color-header-dark: #9c9c9c;
+$ttip-bg-dark: #2e3134;
+$ttip-text-dark: #ffffff;
+$scroll-color-dark: #ffffff;
+$gradient-color-1-dark: #202020;
+$gradient-color-2-dark: #1b1b1b;
+$color-2-dark: #323232;
+$color-3-dark: #262626;
+$color-4-dark: #9c9c9c;
+$color-5-dark: #fbfbfb;
+$color-red: red;
+//light
+
+// Light Theme Variables
+$background-color-light: #ffffff;
+$text-color-light: #1b1b1b;
+$text-color-header-light: #9c9c9c;
+$ttip-bg-light: #ffffff;
+$ttip-text-light: #2e3134;
+$scroll-color-light: #6f6f6f;
+$color-4-light: #f9f9f9;
+$color-5-light: #202020;
+//common
+$gradient-color-1-light: #fbfbfb;
+$gradient-color-2-light: #ffffff;
+$color-2-light: #f7f7f7;
+$color-3-light: #9c9c9c;
+
+// Common Variables
+$navbar-bg: #242323;
+$sub-nav-menu-bg: #2e2e2e;
+$font-family-1: 'Montserrat';
+$font-family-2: 'Guardian Egyp';
+$inactive-color: #727272;
+$profile-bg: #0046bc;
+
+// Font Size Variables for Montserrat and Guardian
+$montserrat-font-size-1: 12px; // Smallest size
+$montserrat-font-size-2: 14px; // Regular
+$montserrat-font-size-3: 16px; // Medium
+$montserrat-font-size-4: 18px; // Large
+$montserrat-font-size-5: 20px; // X-Large
+
+$guardian-font-size-1: 20px; // Smallest size
+$guardian-font-size-2: 24px; // Regular
+$guardian-font-size-3: 32px; // Large
+
+// Theme Variables (for SCSS)
+:root {
+	--background-color: #{$background-color-dark};
+	--text-color: #{$text-color-dark};
+	--text-color-header: #{$text-color-header-dark};
+	--navbar-bg: #{$navbar-bg};
+	--ttip-color-bg: #{$ttip-bg-dark};
+	--ttip-color-text: #{$ttip-text-dark};
+	--sub-nav-menu-bg: #{$sub-nav-menu-bg};
+	--scroll-color: #{$scroll-color-dark};
+	--font-family-1: #{$font-family-1};
+	--gradient-color-1: #{$gradient-color-1-dark};
+	--gradient-color-2: #{$gradient-color-2-dark};
+	--color-2: #{$color-2-dark};
+	--color-3: #{$color-3-dark};
+	--color-4: #{$color-4-dark};
+	--color-5: #{$color-5-dark};
+	--inactive-color: #{$inactive-color};
+	--profile-bg: #{$profile-bg};
+}
+
+[data-theme='dark'] {
+	--background-color: #{$background-color-dark};
+	--text-color: #{$text-color-dark};
+	--text-color-header: #{$text-color-header-dark};
+	--navbar-bg: #{$navbar-bg};
+	--ttip-color-bg: #{$ttip-bg-light};
+	--ttip-color-text: #{$ttip-text-light};
+	--sub-nav-menu-bg: #{$sub-nav-menu-bg};
+	--scroll-color: #{$scroll-color-dark};
+	--gradient-color-1: #{$gradient-color-1-dark};
+	--gradient-color-2: #{$gradient-color-2-dark};
+	--color-2: #{$color-2-dark};
+	--color-3: #{$color-3-dark};
+	--color-4: #{$color-4-dark};
+	--color-5: #{$color-5-dark};
+}
+
+[data-theme='light'] {
+	--background-color: #{$background-color-light};
+	--text-color: #{$text-color-light};
+	--text-color-header: #{$text-color-header-light};
+	--navbar-bg: #{$navbar-bg};
+	--ttip-color-bg: #{$ttip-bg-dark};
+	--ttip-color-text: #{$ttip-text-dark};
+	--sub-nav-menu-bg: #{$sub-nav-menu-bg};
+	--scroll-color: #{$scroll-color-light};
+	--gradient-color-1: #{$gradient-color-1-light};
+	--gradient-color-2: #{$gradient-color-2-light};
+	--color-2: #{$color-2-light};
+	--color-3: #{$color-3-light};
+	--color-4: #{$color-4-light};
+	--color-5: #{$color-5-light};
+}
+
+// Global Styles
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+.nav-tap {
+	background-color: var(--navbar-bg);
+}
+
+.default-scroll-5 {
+	&::-webkit-scrollbar {
+		width: 5px;
+		height: 3px;
+		border-radius: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: var(--color-2);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--text-color);
+	}
+}
+
+.x-scroll-color {
+	overflow-x: auto;
+
+	&::-webkit-scrollbar {
+		background-color: var(--scroll-color);
+	}
+}
+
+.nav-ul {
+	li {
+		margin: 0.5rem 5px;
+	}
+}
+
+.scroll-nav {
+	&::-webkit-scrollbar {
+		width: 3px;
+		height: 3px;
+		background-color: var(--scroll-color);
+	}
+}
+
+.profile-icon {
+	border-radius: 50%;
+	border: 1.5px solid #848484;
+
+	&:hover {
+		border-radius: 50%;
+	}
+
+	p {
+		color: #fff;
+		text-align: center;
+		font-family: var(--font-family-1);
+		font-size: 1.25rem;
+		font-weight: 500;
+	}
+}
+
+.profile-status {
+	height: 7px;
+	width: 7px;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	bottom: 0.25rem;
+	border: 1px solid white;
+}
+
+h1 {
+	display: inline-block;
+}
+
+.custom-ttip {
+	background-color: var(--ttip-color-bg);
+	color: var(--ttip-color-text);
+}
+
+.submenu-outer {
+	background-color: var(--sub-nav-menu-bg);
+	height: calc(100vh - 2.5rem);
+	padding: 1rem;
+	width: max-content;
+}
+
+.submenu-div {
+	transform: translateX(-16%);
+	overflow: hidden;
+	white-space: nowrap;
+	opacity: 0;
+	display: none;
+	transition:
+		transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1),
+		opacity 0.2s ease-in-out;
+
+	&.show {
+		transform: translateX(0);
+		opacity: 1;
+		display: block;
+	}
+}
+
+.search-box {
+	background-color: #1f1f1f;
+	height: 40px;
+	padding: 5px 10px;
+	border-radius: 8px;
+
+	input {
+		height: 100%;
+		background-color: inherit;
+		border: none;
+		outline: none;
+	}
+}
+
+// ---------------generic styles-------------
+// Example usage of font-size variables
+.page-title {
+	font-weight: 600;
+	font-size: $guardian-font-size-2; // Example using Guardian font size
+	font-family: var(--font-family-2);
+	color: var(--text-color);
+}
+
+.title-15 {
+	font-size: 0.9rem;
+}
+
+.title-14 {
+	font-size: 0.8rem;
+}
+
+.subtitle-16 {
+	font-size: 1rem;
+}
+
+//this is added so it goes above google maps
+.react-tooltip {
+	z-index: 1 !important;
+}
+
+//rotate image upside-down
+.reverse-arrow {
+	transition: transform 0.5s ease;
+}
+
+.reverse-arrow-rotated {
+	transform: rotate(180deg);
+}
+
+.sub-header {
+	font-size: 0.9rem;
+	color: var(--text-color-header);
+}
+
+.filter_label {
+	font-size: 0.9rem;
+	margin-bottom: 0.6rem;
+	color: var(--text-color);
+}
+
+/* Apply Button */
+.apply_button {
+	background-color: var(--text-color);
+	color: var(--color-2);
+	border: none;
+	font-size: 1rem;
+	border-radius: 8px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	cursor: pointer;
+}
+
+.apply_button:hover {
+	background-color: #e6e6e6;
+}
+
+// --------------date picker---------------------------
+.trip-date-box {
+	.react-datepicker-wrapper {
+		width: 95%;
+	}
+}
+
+// --------------map styles---------------------------
+.map_marker {
+	transition: transform 0.3s ease-in-out;
+	// height: 3rem;
+	// width: auto;
+	width: 40px;
+	height: 40px;
+	transform-origin: center bottom; /* Ensures rotation is from the bottom */
+	// position: absolute;
+	// bottom: 0; /* Align the image properly */
+	// left: 0;
+}
+
+.marker-content {
+	transition: transform 0.3s linear; /* Adjust as needed */
+}
+
+.gm-style-mtc-bbw {
+	left: 38% !important;
+}
+
+.gm-style-mtc-bbw button {
+	border-radius: 5px !important;
+}

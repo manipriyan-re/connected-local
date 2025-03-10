@@ -1,0 +1,95 @@
+.deep_log_event_history_container {
+  color: white;
+  padding: 0px 20px;
+
+  .deep_log_event_history_header {
+    height: 4rem;
+
+    section {
+      width: 50%;
+    }
+  }
+
+  .filtered-record-section {
+    width: auto; /* Hug content */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px; /* Space between components */
+    opacity: 1; /* Set to 0 for hidden, 1 for visible */
+
+    .filtered-record-text {
+      font-size: 16px;
+      font-weight: bold;
+      color: #fbfbfb;
+    }
+
+    .search-filter-section {
+      display: flex;
+      align-items: center;
+      gap: 8px; /* Adjust gap between search bar and filter wrapper */
+      height: 40px;
+
+      .search_bar_container {
+        max-width: 300px; /* Hug content */
+        width: auto;
+      }
+
+      .filter-icon-wrapper {
+        width: 42px;
+        height: 40px;
+        // border: 1px solid;
+        border-radius: 6px; /* Rounded corners */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: var(--gradient-color-1); /* Gradient background */
+
+        &:hover {
+          background-color: #f0f0f0; /* Lighter color on hover */
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .deep_log_event_history_tabs_container {
+    height: 60px;
+
+    .dashboard_tabs_left {
+      .tabs_title_container {
+        display: flex;
+        border-radius: 6px;
+
+        button {
+          height: 36px;
+          display: flex;
+          width: 110px;
+          border-radius: 6px;
+          font-size: 13x;
+          justify-content: center;
+          align-items: center;
+          font-weight: normal;
+          font-family: "Montserrat";
+        }
+        .dropdown_container {
+          button {
+            width: 100%;
+          }
+        }
+
+        .inactive_tab {
+          color: white;
+          opacity: 50%;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

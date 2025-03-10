@@ -1,0 +1,20 @@
+.table {
+  display: grid;
+  grid-template-rows: auto;
+  width: 100%;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* All columns have equal width */
+  /* Add border between rows */
+}
+.cell {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+/* Remove borders for specific cells containing ROW1, ROW2, and ROW3 */
+.cell.no-border {
+  border-bottom: 0px solid #ddd;
+  border: none; /* Remove any border from these cells */
+}

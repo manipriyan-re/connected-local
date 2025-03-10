@@ -1,0 +1,20 @@
+.date_picker_container {
+  input {
+    border-radius: 6px;
+    border: 1px solid var(--color-2);
+    background-color: var(--color-3);
+    height: 40px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    width: 100%;
+    padding: 0 1rem;
+
+    &::placeholder {
+      color: var(--text-color-header);
+    }
+
+    &:focus-visible {
+      outline: 0px; // or any other style you want to apply on focus
+    }
+  }
+}

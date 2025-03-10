@@ -1,0 +1,102 @@
+td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; // 171.429%
+  letter-spacing: 0.5px;
+
+  .text-gray-400 {
+    display: block; // Ensures the model text appears on the next line
+  }
+}
+
+button {
+  display: flex;
+  align-items: center; // Aligns vin and arrow horizontally
+  space-x: 0.5rem; // Adds space between vin and arrow
+}
+.graph-table {
+  border: 0px solid var(--text-color);
+  padding: 1rem;
+  background-color: var(--graph-bgcolor);
+  border-radius: 7px;
+}
+.graph-table-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.graph-table-label {
+  height: 8px;
+  width: 25px;
+  border-radius: 2px;
+}
+.d-flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-10 {
+  gap: 10px;
+}
+.text-color {
+  color: var(--text-color);
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.table {
+  display: grid;
+  grid-template-rows: auto;
+  width: 35rem;
+  height: 5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* All columns have equal width */
+  /* Add border between rows */
+}
+
+.cell {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Remove borders for specific cells containing ROW1, ROW2, and ROW3 */
+.cell.no-border {
+  border-bottom: 0px solid #ddd;
+  border: none; /* Remove any border from these cells */
+}
+.min-w-screen {
+  overflow-x: hidden;
+}
+.bg-active {
+  background-color: #323232;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+  transform: translateX(0);
+}

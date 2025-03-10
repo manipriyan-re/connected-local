@@ -1,0 +1,184 @@
+.overview_container_details {
+	.overview_top_section_container {
+		width: 95%;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		margin-top: 15px;
+		.overview_top_section_left_container {
+			width: 40%;
+			gap: 20px;
+			margin-right: 15px;
+		}
+		.overview_top_section_right_container {
+			width: 60%;
+		}
+		.overview_top_overlay_container {
+			background-color: #1f1f1f;
+			border: 1px solid #2c2c2c;
+			border-radius: 6px;
+			padding: 24px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.bike_tpms {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+
+		.configuration_info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 2px;
+		}
+
+		.pressure_values {
+			display: flex;
+			gap: 65px; /* Adjust the gap as needed */
+			font-size: 14px;
+			font-weight: bold;
+			color: #fbfbfb;
+			margin-top: 8px;
+			margin-left: 0px;
+			margin-right: 45px;
+		}
+
+		.header_row {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			margin-bottom: 10px;
+			gap: 2px;
+		}
+
+		.header_row_left,
+		.header_row_right {
+			margin-bottom: 4px;
+		}
+
+		.header_title {
+			display: inline-flex;
+			font-size: 14px;
+			color: #9c9c9c;
+			margin-bottom: 2px;
+			display: flex;
+			align-items: center;
+			gap: 8px; /* Adjust spacing between icons and text */
+			span {
+				font-weight: bold;
+			}
+
+			img {
+				display: inline-block;
+			}
+		}
+
+		.header_content {
+			font-size: 14px;
+			margin-top: 4px;
+		}
+		.header_overlay_title {
+			display: flex;
+			align-items: center;
+			gap: 8px; /* Adjust spacing between icons and text */
+			font-size: 12px;
+			span {
+				font-weight: bold;
+			}
+
+			img {
+				display: inline-block;
+			}
+		}
+	}
+
+	.vehicle_status_container {
+		background-color: #1f1f1f;
+		border: 1px solid #2c2c2c;
+		border-radius: 6px;
+		width: 95%;
+		margin: auto;
+		padding: 16px;
+		margin-bottom: 15px;
+
+		.vehicle_status_top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: 16px;
+			margin-bottom: 8px;
+		}
+
+		.vehicle_status_info {
+			.vehicle_name {
+				font-size: 20px;
+				font-weight: bold;
+				color: #fbfbfb;
+			}
+
+			.vehicle_status {
+				font-size: 16px;
+				color: var(--Green-Green-5, #4ec200);
+				font-weight: 500;
+			}
+		}
+
+		.vehicle_charge {
+			font-size: 16px;
+			font-weight: bold;
+			color: #fbfbfb;
+		}
+
+		.vehicle_details_container {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 0px;
+			width: 100%;
+
+			.odometer,
+			.vehicle_mode,
+			.ride_mode,
+			.ignition,
+			.vehicle_status {
+				width: 20%;
+				padding: 0;
+
+				p {
+					margin-bottom: 10px;
+				}
+
+				p:first-child {
+					font-size: 14px;
+					color: #9c9c9c;
+				}
+
+				p:nth-child(2) {
+					font-size: 14px;
+					color: #fbfbfb;
+				}
+			}
+		}
+	}
+
+	.header_overlay_title.temperature,
+	.header_overlay_title.trip_summary {
+		font-family: 'Guardian Egyp';
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 14.4px;
+		margin-bottom: 8px;
+		letter-spacing: 32%;
+		color: #9c9c9c;
+	}
+
+	.info_icon {
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+}

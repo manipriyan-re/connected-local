@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Theme */
+:root {
+	--primary: #3490dc;
+	--secondary: #ffed4a;
+	--background: #ffffff;
+	--text: #333333;
+}
+
+/* Dark Theme */
+.dark {
+	--secondary: #ffdd57;
+	--background: #1b1b1b;
+	--grey-backgriund: #1f1f1f;
+	--grey-text: #9c9c9c;
+	--text: #e4e4e4;
+}
+
+body {
+	/* color: var(--foreground);
+  background: var(--background); */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Apply a blur effect and disable scroll when sidebar is active */
+body.sidebar-active {
+	overflow: hidden;
+	/* Disables scrolling on the body */
+}
+
+body.sidebar-active .vehicle_dashboard_container {
+	/* filter: blur(8px); */
+	/* Applies blur to the background content */
+	pointer-events: none;
+	/* Prevents interactions with the background content */
+}
+
+/* Ensure the sidebar is not blurred */
+body.sidebar-active .sidebar_container {
+	filter: none;
+	/* Prevent sidebar from being blurred */
+	pointer-events: auto;
+	/* Ensure sidebar remains interactive */
+}
+
+/* Optionally: Make sure sidebar remains visible and above content */
+.sidebar_container .tabs_content_container {
+	z-index: 1000;
+	filter: unset;
+}
+
+@layer utilities {
+	.navbar-menu-hov {
+		border-radius: 5px;
+		background-color: #353535;
+	}
+}

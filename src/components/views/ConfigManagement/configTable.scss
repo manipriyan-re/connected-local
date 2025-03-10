@@ -1,0 +1,127 @@
+/* Table styling */
+table {
+  font-family: "Fraunces", serif;
+  font-size: 125%;
+  white-space: nowrap;
+  margin: 0;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* Make header sticky */
+table thead th {
+  padding: 3px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: white; /* Ensure background remains visible when scrolling */
+}
+
+/* Table data cells */
+table td {
+  padding: 4px 5px;
+  text-align: center;
+}
+
+/* Sticky first column */
+table thead th:first-child,
+table tbody td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  background: white; /* Keeps background white when scrolling */
+}
+
+/* Sticky second column */
+table thead th:nth-child(2),
+table tbody td:nth-child(2) {
+  position: sticky;
+  left: 147px; /* Adjust based on your column width */
+  z-index: 3;
+  background: white; /* Ensures background remains visible when scrolling */
+}
+
+/* Scrollable container */
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Ensure white background when overflowing */
+.table-wrapper table thead th,
+.table-wrapper table tbody td:first-child,
+.table-wrapper table tbody td:nth-child(2) {
+  background: var(--gradient-color-1);
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: white;
+}
+
+/* Sticky Columns */
+.sticky-column {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 10;
+}
+
+/* Sticky Header for first & second column */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: white;
+}
+
+/* Sticky Columns */
+.sticky-column {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 10;
+}
+
+/* Make second column sticky with appropriate offset */
+.sticky-column:nth-child(2) {
+  // left: 150px;
+  z-index: 10;
+  background: white;
+}
+
+/* Wrapper to enable horizontal scrolling */
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Ensures thead remains white to prevent text overlap */
+table thead tr {
+  background: white;
+}
+
+/* Sticky header for first and second columns */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: white;
+}
+
+/* Sticky column for first and second columns */
+.sticky-column {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 10;
+}

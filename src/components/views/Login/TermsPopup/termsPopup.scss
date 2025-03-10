@@ -1,0 +1,140 @@
+// Overlay
+.terms_overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.9s ease-in-out;
+}
+
+// Container
+.terms_container {
+  width: 1080px;
+  height: 614px;
+  background-color: #a29161; // "mud" color
+  border-radius: 16px;
+  padding-top: 8px;
+  animation: slideUp 0.9s ease-in-out;
+}
+// Keyframes for popup transition
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} // Keyframes for overlay fade-in
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// Content
+.terms_content {
+  background-color: #1b1b1b; // "lightblack" color
+  color: #fbfbfb;
+  height: 614px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+// Header
+.terms_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .terms_titleWrapper {
+    display: flex;
+    align-items: center;
+    .terms_title {
+      font-family: Guardian Egyp;
+      font-size: 24px;
+      line-height: 28.8px;
+      font-weight: 500;
+      color: #fbfbfb;
+    }
+    .terms_icon {
+      font-size: 1.5rem;
+      margin-right: 8px;
+    }
+  }
+
+  .terms_closeButton {
+    text-align: end;
+    cursor: pointer;
+    span {
+      background: #202020;
+      padding: 6px 8px;
+      font-size: large;
+      border-radius: 6px;
+      color: #787878;
+      &:hover {
+        background-color: #2e2c2c;
+      }
+    }
+  }
+}
+
+// Subtitle
+.terms_subtitle {
+  padding-left: 42px;
+  margin-bottom: 24px;
+  color: #999;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  font-family: "Montserrat", sans-serif;
+  gap: 16px;
+}
+
+// Divider
+.terms_divider {
+  margin-bottom: 12px;
+  border: 1px solid #323232;
+}
+
+// Scrollable Body
+.terms_body {
+  margin: 20px 0;
+  font-size: 16px;
+  height: 349px;
+  overflow-y: auto;
+  font-family: "Montserrat", sans-serif;
+  color: #fbfbfb;
+  line-height: 27px;
+  font-weight: 500;
+  // Custom scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Button
+.terms_footerButton {
+  align-self: flex-end;
+  background-color: #fbfbfb;
+  color: black;
+  padding: 12px 32px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}

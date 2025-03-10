@@ -1,0 +1,19 @@
+#multi-dropdown {
+    font-family: Montserrat;
+}
+.msd-box {
+    border: 1px solid #323232;
+    border-radius: 6px;
+    background-color: #202020;
+    font-family: Montserrat;
+}
+
+.msd-list {
+    list-style: none;
+}
+
+.msd-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
